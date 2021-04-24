@@ -1,0 +1,59 @@
+*   Trying 172.67.149.1...
+* TCP_NODELAY set
+* Connected to id.luilochoon.info (172.67.149.1) port 443 (#0)
+* ALPN, offering h2
+* ALPN, offering http/1.1
+* Cipher selection: ALL:!EXPORT:!EXPORT40:!EXPORT56:!aNULL:!LOW:!RC4:@STRENGTH
+* successfully set certificate verify locations:
+*   CAfile: /etc/pki/tls/certs/ca-bundle.crt
+  CApath: none
+* SSL connection using TLSv1.2 / ECDHE-ECDSA-AES128-GCM-SHA256
+* ALPN, server accepted to use h2
+* Server certificate:
+*  subject: C=US; ST=CA; L=San Francisco; O=Cloudflare, Inc.; CN=sni.cloudflaressl.com
+*  start date: Aug 15 00:00:00 2020 GMT
+*  expire date: Aug 15 12:00:00 2021 GMT
+*  subjectAltName: host "id.luilochoon.info" matched cert's "*.luilochoon.info"
+*  issuer: C=US; O=Cloudflare, Inc.; CN=Cloudflare Inc ECC CA-3
+*  SSL certificate verify ok.
+* Using HTTP2, server supports multi-use
+* Connection state changed (HTTP/2 confirmed)
+* Copying HTTP/2 data in stream buffer to connection buffer after upgrade: len=0
+* Using Stream ID: 1 (easy handle 0x2c421c0)
+> POST /api/account/authenticatev2 HTTP/2
+Host: id.luilochoon.info
+Accept: */*
+Content-Type: application/json
+Client-Version: 1.0.11
+Client-Model: OPPO A37f
+Client-Name: e yeu
+Client-DeviceID: bbb9b7479a7e35d1381f08757e44fe8e
+Client-OperatingSystem: Android OS 5.1.1 / API-22 (LMY47V/1480422943)
+Client-OperatingSystemFamily: Other
+Client-ProcessorCount: 4
+Client-ProcessorFrequency: 1209
+Client-ProcessorType: ARM64 FP ASIMD
+Client-DeviceType: Handheld
+Client-Token: 4e5d6eb57c7e178a441e76470e6be215
+Client-OSType: ANDROID
+Connection: Keep-Alive, TE
+TE: identity
+User-Agent: BestHTTP
+Cookie: __cfduid=deb91fdd2c6bd814ee76b2fb6b6cb09591603632770; expires=Tue, 24-Nov-20 13:32:50 GMT; path=/; domain=.luilochoon.info; HttpOnly; SameSite=Lax; .netcore.session=CfDJ8Cx4G6dlbwhGgxrbvrjRiPgd%2FhRMYBCrlmfPpEVJPucgklZ3Z1j0%2FcfPMnnNJsoDuQDePaDLzXaQd0Taq8Mm5NlB5pRlvytfU%2FUzbD5OIDWIacJSRzbTKVF9VvU3Luf7YE6ZBhbPO897ke41%2F3827t0hV%2F1uMimuGszIUpEXdJ5j; path=/; samesite=lax; httponly; NSC_mc.je.w88.wjo=475ca3dd698e190b7f44fe09ea6055999613d41b2d276dce2563e49a22bfc9556c86a66b;Version=1;Max-Age=120;path=/;httponly
+Content-Length: 164
+
+* Connection state changed (MAX_CONCURRENT_STREAMS == 256)!
+* We are completely uploaded and fine
+< HTTP/2 400 
+< date: Sun, 25 Oct 2020 13:38:04 GMT
+< content-type: application/json; charset=utf-8
+< set-cookie: NSC_mc.je.w88.wjo=475ca3dd698e190b7f44fe09ea6055999613d41b2d276dce2563e49a22bfc9556c86a66b;Version=1;Max-Age=120;path=/;httponly
+< cf-cache-status: DYNAMIC
+< cf-request-id: 060194106c0000e7ed2a39a000000001
+< expect-ct: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+< report-to: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report?lkg-colo=12&lkg-time=1603633085"}],"group":"cf-nel","max_age":604800}
+< nel: {"report_to":"cf-nel","max_age":604800}
+< server: cloudflare
+< cf-ray: 5e7c55fa4ce1e7ed-LAX
+< 
+* Connection #0 to host id.luilochoon.info left intact
