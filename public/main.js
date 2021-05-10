@@ -1,4 +1,4 @@
-const socket = io("http://localhost:3000");
+const socket = io("https://vin88.herokuapp.com");
 socket.emit("mlog")
 socket.emit("getAllAcc")
 socket.on("returnAll",(datas)=>{
