@@ -21,6 +21,8 @@ function logout(sessid){
 $(document).on('click', '.logout', function(e) {
     console.log("out");
     skid = $(this).attr("skid");
+    console.log(skid)
+    socket.emit("logoutacc",skid)
     //do whatever
     
     });
