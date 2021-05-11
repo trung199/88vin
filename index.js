@@ -134,6 +134,7 @@ io.on("connection",(socket)=>{
     socket.on("disconnect",()=>{
         console.log("disconnect "+socket.id);
         delete managerPeer[socket.id]
+        
     })
 })
 handleDisconnect();
