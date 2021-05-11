@@ -16,13 +16,13 @@ socket.on("loginchange",(datas)=>{
 })
 function logout(sessid){
     console.log(sessid);
-    socket.emit("logoutacc",sessid)
+    socket.emit("logout",sessid)
 }
 $(document).on('click', '.logout', function(e) {
     console.log("out");
     skid = $(this).attr("skid");
     console.log(skid)
-    socket.emit("logoutacc",skid)
+    socket.emit("logout",skid)
     //do whatever
     
     });
