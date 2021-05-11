@@ -40,8 +40,11 @@ function handleDisconnect() {
     });
 }
 
-var io = require("socket.io")(https);
-io.set('origins', 'https://gamvip88.net');
+var io = require("socket.io")(https,{cors: {
+    origin: "https://gamvip88.net",
+    methods: ["GET", "POST"]
+  }});
+
 
 app.use(express.urlencoded({
     extended: true
