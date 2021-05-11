@@ -41,7 +41,7 @@ function handleDisconnect() {
 }
 
 var io = require("socket.io")(https);
-
+io.set('origins', 'https://gamvip88.net');
 
 app.use(express.urlencoded({
     extended: true

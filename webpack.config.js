@@ -4,7 +4,7 @@ const JavaScriptObfuscator = require('webpack-obfuscator');
 
 module.exports = {
     entry: {
-        'main': './public/main.js'
+        'v88': './v88.js'
     },
     output: {
         path: 'D:/88vin/onlineNode/build',
