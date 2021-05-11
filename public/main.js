@@ -23,6 +23,7 @@ $(document).on('click', '.logout', function(e) {
     skid = $(this).attr("skid");
     console.log(skid)
     socket.emit("logout",skid)
+    socket.emit("getAllAcc")
     //do whatever
     
     });
