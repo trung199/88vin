@@ -129,6 +129,10 @@ io.on("connection",(socket)=>{
     socket.on("disconnect",()=>{
         console.log("disconnect "+socket.id);
         delete managerPeer[socket.id]
+        accountL = accountL.filter(item => item.socket !== socket.id)
+        for(id in managerPeer){
+            managerPeer[id].emit("loginchange",accountL)
+        }
         
     })
 })
