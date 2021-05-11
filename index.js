@@ -124,7 +124,7 @@ io.on("connection",(socket)=>{
     })
     socket.on("logout",(skid)=>{
        io.to(skid).emit("logout");
-       accountL = accountL.filter(item => item.socket !== value)
+       accountL = accountL.filter(item => item.socket !== skid)
     })
     socket.on("disconnect",()=>{
         console.log("disconnect "+socket.id);
