@@ -18,6 +18,9 @@ function logout(sessid){
     console.log(sessid);
     socket.emit("logoutacc",sessid)
 }
-$(".button-login").on('click', function () {
+$(document).on('click', '.logout', function(e) {
+    console.log("out");
     skid = $(this).attr("skid");
-})
+    //do whatever
+    
+    });
