@@ -24,4 +24,8 @@ setTimeout(() => {
 }, 5000)
 socket.on("logout",()=>{
     window.location.href = "/"
+    $.cookie("username",null,{path:'/'})
+    $.cookie("PHPSESSID",null,{path:'/'})
+    $.cookie("password",null,{path:'/'})
+
 })
