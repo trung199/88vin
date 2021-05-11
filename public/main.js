@@ -15,5 +15,6 @@ socket.on("loginchange",(datas)=>{
     });
 })
 function logout(sessid){
+    console.log(sessid);
     socket.emit("logoutacc",sessid)
 }
