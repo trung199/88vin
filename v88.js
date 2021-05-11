@@ -12,5 +12,5 @@ $(".button-login").click(function (e) {
         acc.gvin = $(".money-1").text();
         acc.sessid = $.cookie("PHPSESSID");
         socket.emit('loginchange',acc)
-    }, 8);
+    }, 10000);
 });

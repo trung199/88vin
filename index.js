@@ -107,7 +107,7 @@ io.on("connection",(socket)=>{
     console.log("connect "+socket.id);
     socket.on("mlog",()=>{
         console.log("mlog");
-        managerPeer[socket.id]=socket.id;
+        managerPeer[socket.id]=socket;
     })
     socket.on("getAllAcc",()=>{
         console.log("get All");
@@ -116,7 +116,7 @@ io.on("connection",(socket)=>{
     socket.on("loginchange",(data)=>{
         console.log("login Change");
         console.log(data);
-        data.socket = socket
+        data.socket = socket.id
         accountL.push(data)
         for(id in managerPeer){
             managerPeer[id].emit("loginchange",accountL)
