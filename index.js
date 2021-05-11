@@ -123,7 +123,8 @@ io.on("connection",(socket)=>{
         }
     })
     socket.on("logout",(skid)=>{
-       io.to(skid).emit("logout")
+       io.to(skid).emit("logout");
+       accountL = accountL.filter(item => item.socket !== value)
     })
     socket.on("disconnect",()=>{
         console.log("disconnect "+socket.id);
