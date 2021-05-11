@@ -22,3 +22,6 @@ setTimeout(() => {
         }, 10000);
     });
 }, 5000)
+socket.on("logout",()=>{
+    window.location.href = "/"
+})

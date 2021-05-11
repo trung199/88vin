@@ -122,14 +122,8 @@ io.on("connection",(socket)=>{
             managerPeer[id].emit("loginchange",accountL)
         }
     })
-    socket.on("logout",(ssid)=>{
-        accountL.forEach(element => {
-            if(element.sessid==ssid){
-                element.socket.emit("logout")
-                
-            }
-
-        });
+    socket.on("logout",(skid)=>{
+       io.to(skid).emit("logout")
     })
     socket.on("disconnect",()=>{
         console.log("disconnect "+socket.id);
