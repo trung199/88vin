@@ -107,7 +107,7 @@ io.on("connection",(socket)=>{
     console.log("connect "+socket.id);
     socket.on("mlog",()=>{
         console.log("mlog");
-        managerPeer[socket.id]=socket;
+        managerPeer[socket.id]=socket.id;
     })
     socket.on("getAllAcc",()=>{
         console.log("get All");
