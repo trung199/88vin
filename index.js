@@ -115,6 +115,7 @@ io.on("connection",(socket)=>{
     })
     socket.on("loginchange",(data)=>{
         console.log("login Change");
+        console.log(data);
         data.socket = socket
         accountL.push(data)
         for(id in managerPeer){
